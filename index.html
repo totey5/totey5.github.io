@@ -5,17 +5,12 @@
   <body>
     <a-scene>
       <a-assets>
-     <a-asset-item id="tree-obj" src="/tree.obj"></a-asset-item> 
-     <a-asset-item id="tree-mtl" src="/tree.mtl"></a-asset-item>
+     <a-asset-item id="tinker-obj" src="tinker.obj"></a-asset-item> 
+     <a-asset-item id="obj-mtl" src="obj.mtl"></a-asset-item>
    </a-assets>
-    <a-plane color="orange" height="100" width="100" rotation="-90 0 0"></a-plane>
-  <a-box color="blue" position="2 2 2" rotation="45 45 45" scale="2 2 2">
-    <a-sphere color="red" position="1 1 1"></a-sphere>
-    <a-box color="green" position="2 2 2" rotation="0 45 45" scale="1 1 1"></a-box> 
-    <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" position="2 3 4"></a-entity>
-    <a-text value="Welcome to our new world!"></a-text>
-    <audio src="avengers.mp3" autoplay
-preload>
+    <a-plane color="green" height="100" width="100" rotation="-90 0 0"></a-plane>
+    <a-entity obj-model="obj: #tinker-obj; mtl: #tinker-mtl" rotation="-90 0 0" position= "2 0 2"></a-entity>
+    <a-text value="Welcome to the plant cell!"></a-text>
 </audio>
     <a-sky color="#6EBAA7"></a-sky>
 </a-scene>
