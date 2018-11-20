@@ -1,6 +1,7 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
   </head>
   <body>
     <a-scene>
@@ -10,6 +11,9 @@
    </a-assets>
    <a-entity position="1.786 4.217 10.101">
   <a-camera></a-camera>
+  <a-camera>
+<a-cursor></a-cursor>
+</a-camera>
 </a-entity>
     <a-plane color="#FFC300" height="100" width="100" rotation="-90 0 0"></a-plane>
     <a-entity obj-model="obj: #tinker-obj; mtl: #obj-mtl" rotation="-90 0 0" position= "2 0 2" scale="0.15 0.15 0.15"></a-entity>
@@ -24,6 +28,13 @@
     <a-text value="- Vacuole = storage = light blue" position="2 5.5 0" color="red"></a-text>
     <a-text value="- Smooth and rough ER = passageways/ hallways in cell = pink" position="2 6 0" color="red"></a-text>
   <a-sky color="#FFC300"></a-sky>
+   <a-text id="helloText" visible = "false" value="Welcome to your new room!" position="-1.5 4 -5" color="#000" scale="1.5 1.5 1.5"></a-text>
+<a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#F44336"
+event-set__enter="_event: mouseenter; _target: #helloText; visible: true"
+event-set__leave="_event: mouseleave; _target: #helloText; visible: false">
+</a-box>
+
+
 </a-scene>
   </body>
 </html>
